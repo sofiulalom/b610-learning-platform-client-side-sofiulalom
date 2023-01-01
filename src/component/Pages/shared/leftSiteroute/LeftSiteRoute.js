@@ -10,7 +10,7 @@ const LeftSiteRoute = () => {
     const [catagoris, setCatagoris]=useState([])
  
     useEffect(()=>{
-        fetch('http://localhost:5500/catagoris')
+        fetch('https://b610-lerning-platform-server-side-sofiulalom.vercel.app/catagoris')
         .then(res=> res.json())
         .then(data => setCatagoris(data))
     },[])

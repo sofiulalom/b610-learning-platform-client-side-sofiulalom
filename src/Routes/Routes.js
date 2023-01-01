@@ -16,18 +16,18 @@ export const routes=createBrowserRouter([
         {
             path:'/',
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:5500/courses')
+            loader: () => fetch('https://b610-lerning-platform-server-side-sofiulalom.vercel.app/courses')
            
         },
         {
           path:'/catagory/:id',
           element: <Catagory></Catagory>,
-          loader: ({params})=> fetch(`http://localhost:5500/catagory/${params.id}`)
+          loader: ({params})=> fetch(`https://b610-lerning-platform-server-side-sofiulalom.vercel.app/catagory/${params.id}`)
        },
        {
          path:'/course/:id',
          element:<PribateRoute><Courses></Courses></PribateRoute>,
-         loader: ({params}) => fetch(`http://localhost:5500/course/${params.id}`)
+         loader: ({params}) => fetch(`https://b610-lerning-platform-server-side-sofiulalom.vercel.app/course/${params.id}`)
        },
         {
           path:'/blogs',
